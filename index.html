@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Traversal of multi-tree</title>
+	<style>
+	#container{
+		display:flex;
+		border:1px solid #999;
+		justify-content: center;
+		overflow:hidden;
+		font-family:"微软雅黑";
+		font-size:11px;
+	}
+
+	#container div{
+		display:flex;
+		border:1px solid #999;
+		overflow:hidden;
+	}
+
+	.level-one{
+		height:100px;
+		margin:10px;
+	}
+
+	.level-two,.level-three,.level-four{
+		margin:5px;
+	}
+
+	#btngroup{
+		width:600px;
+		margin:20px auto;
+		font-size:13px;
+	}
+
+	#btngroup div{
+		margin-bottom:10px;
+	}
+
+	#btngroup,#btngroup button{
+		font-family:"微软雅黑";
+	}
+
+	#btngroup button{
+		margin-right:10px;
+		font-size:11px;
+	}
+	</style>
+	<script type="text/javascript" src="traversal-of-multiTree.js"></script>
+</head>
+<body>
+	<div id="btngroup">
+		<div class="traversal">
+			<span>遍历方式</span>
+			<button id="deepTraversal">深度遍历</button>
+			<button id="levelTraversal">层次遍历</button>
+		</div>
+		<div class="search">
+			<span>查找元素</span>
+			<input type="text" id="search-area"/>
+			<button id="deep-search-btn">深度优先查找</button>
+			<button id="wide-search-btn">广度优先查找</button>
+		</div>
+		<div class="insert-delete">
+			<span>节点</span>
+			<input type="text" id="node"/>
+			<button id="insert-btn">插入节点</button>
+			<button id="delete-btn">删除节点</button>
+			<span class="tip">(点击相应节点后选择相应插入/删除操作)</span>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="container" title="Super">Super
+			<div class="level-one" title="Fruit">Fruit
+				<div class="level-two" title="Apple">Apple
+					<div class="level-three" title="Poar">Poar</div>
+					<div class="level-three" title="Pig">Pig</div>
+					<div class="level-three" title="Cola">Cola</div>
+					<div class="level-three" title="Soccor">Soccor</div>
+				</div>
+				<div class="level-two" title="Phone">Phone</div>
+				<div class="level-two">
+					<div class="level-three" title="Book">Book</div>
+					<div class="level-three" title="School">School</div>
+				</div>
+			</div>
+			<div class="level-one" title="Noto">Noto
+				<div class="level-two" title="Human">Human
+					<div class="level-three" title="Code">Code</div>
+					<div class="level-three" title="Operate">Operate</div>
+					<div class="level-three" title="Man">Man</div>
+				</div>
+				<div class="level-two" title="Program">Program
+					<div class="level-three" title="Element">Element
+						<div class="level-four" title="Cat">Cat</div>
+					</div>
+					<div class="level-three" title="Glass">Glass</div>
+				</div>
+			</div>
+			<div class="level-one" title="Fish">Fish</div>
+		</div>
+	</div>
+</body>
+</html>
